@@ -30,13 +30,37 @@ The processed datasets have been placed in the [dataset](https://github.com/baaa
 For visual token features, we used the bottom-up features (36 regions for each image) which are extracted by a pre-trained Faster R-CNN. 
 
 **COCO-EE**
+
 Download the pre-computed features file [coco_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~45.2 GB) and place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
 
 **Flickr30K-EE**
+
 Download the pre-computed features file [flickr30k_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~11.6 GB) and place it under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
+
+## Evaluation
+To reproduce the results in the paper, download the pretrained model file [pretrained_tiger](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/saved_models.tgz) (~4 GB) and place them under the `pretrained_models/COCOEE` and `pretrained_models/Flickr30KEE` folder, respectively.
+
+To reproduce the results of our model, run:
+
+**COCO-EE**
+
+```
+python eval.py --from_pretrained_tagger_del pretrained_models/COCOEE/tagger_del.bin --from_pretrained_tagger_add pretrained_models/COCOEE/tagger_add.bin --from_pretrained_inserter pretrained_models/COCOEE/inserter.bin --tasks 1 --batch_size 128 --save_name test_coco_ee --edit_round 5
+```
+
+**Flickr30K-EE**
+
+```
+python eval.py --from_pretrained_tagger_del pretrained_models/Flickr30KEE/tagger_del.bin --from_pretrained_tagger_add pretrained_models/Flickr30KEE/tagger_add.bin --from_pretrained_inserter pretrained_models/Flickr30KEE/inserter.bin --tasks 4 --batch_size 128 --save_name test_flickr30k_ee --edit_round 5
+```
+
+### Expected output
+Under `results/`, you may find the edited results of all experiments. 
+
+## Training procedure
