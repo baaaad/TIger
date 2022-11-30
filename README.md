@@ -31,20 +31,20 @@ For visual token features, we used the [bottom-up features](https://openaccess.t
 
 **COCO-EE**
 
-Download the pre-computed features file [coco_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~45.2 GB) and place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+Download the pre-computed features file [coco_36.tsv](tbd) (~45.2 GB) and place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
 
 **Flickr30K-EE**
 
-Download the pre-computed features file [flickr30k_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~11.6 GB) and place it under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+Download the pre-computed features file [flickr30k_36.tsv](tbd) (~11.6 GB) and place it under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
 
 ## Evaluation
-To reproduce the results in the paper, download the pretrained model file [pretrained_tiger](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/saved_models.tgz) (~4 GB) and place them under the `pretrained_models/COCOEE` and `pretrained_models/Flickr30KEE` folder, respectively.
+To reproduce the results in the paper, download the pretrained model file [pretrained_tiger](tbd) (~4 GB) and place them under the `pretrained_models/COCOEE` and `pretrained_models/Flickr30KEE` folder, respectively.
 
 To reproduce the results of our model, run:
 
@@ -64,7 +64,7 @@ python eval.py --from_pretrained_tagger_del pretrained_models/Flickr30KEE/tagger
 Under `results/`, you may find the edited results of all experiments. 
 
 ## Training procedure
-Download the pretrained weights of [ViLBERT](https://proceedings.neurips.cc/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf) from [here](22) and place it under the `pretrained_models/ViLBERT-6-Layer` folder.
+Download the pretrained weights of [ViLBERT](https://proceedings.neurips.cc/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf) from [here](tbd) and place it under the `pretrained_models/ViLBERT-6-Layer` folder.
 
 Run `python train.py` using the following arguments for different submodules.
 
