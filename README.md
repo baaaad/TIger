@@ -13,3 +13,15 @@ Please cite with the following BibTeX:
 }
 ```
 ![model](images/TIger.png)
+
+
+## Environment setup
+Clone the repository and create the `tiger` conda environment using the `conda.yml` file:
+```
+conda env create -f conda.yml
+conda activate tiger
+```
+
+## Data preparation
+### COCO_EE and Flickr30K_EE
+The processed datasets have been placed in the [dataset](https://github.com/baaaad/ECE-dataset/tree/main/dataset) folder, they can also be directly download from [here](https://drive.google.com/drive/folders/1nzIsGT4SC81aMcC48tCMWcqL77sgYrvT?usp=sharing), including the COCO-EE and Flickr30K-EE in `train`, `dev` and `test` splits.
