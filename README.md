@@ -12,3 +12,4 @@ Please cite with the following BibTeX:
   year={2022}
 }
 ```
+![model](images/TIger.png)
