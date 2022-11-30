@@ -19,7 +19,7 @@ FIELDNAMES = ['image_id', 'image_w','image_h','num_boxes', 'boxes', 'features']
 #           './karpathy_val_resnet101_faster_rcnn_genome.tsv',\
 #           './karpathy_train_resnet101_faster_rcnn_genome.tsv.0', \
 #            './karpathy_train_resnet101_faster_rcnn_genome.tsv.1']
-infiles = ['trainval_resnet101_faster_rcnn_genome_36.tsv']
+infiles = ['flickr30k_36.tsv']
 
 
 
