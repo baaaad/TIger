@@ -24,4 +24,19 @@ conda activate tiger
 
 ## Data preparation
 ### COCO_EE and Flickr30K_EE
-The processed datasets have been placed in the [dataset](https://github.com/baaaad/ECE-dataset/tree/main/dataset) folder, they can also be directly download from [here](https://drive.google.com/drive/folders/1nzIsGT4SC81aMcC48tCMWcqL77sgYrvT?usp=sharing), including the COCO-EE and Flickr30K-EE in `train`, `dev` and `test` splits.
+The processed datasets have been placed in the [dataset](https://github.com/baaaad/TIger/tree/main/datasets) folder, they can also be directly download from [here](https://drive.google.com/drive/folders/1nzIsGT4SC81aMcC48tCMWcqL77sgYrvT?usp=sharing), including the COCO-EE and Flickr30K-EE in `train`, `dev` and `test` splits.
+
+### Visual Features
+For visual token features, we used the bottom-up features (36 regions for each image) which are extracted by a pre-trained Faster R-CNN. 
+
+**COCO-EE**
+Download the pre-computed features file [coco_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~45.2 GB) and place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+```
+python process_bottom_up_feature.py
+```
+
+**Flickr30K-EE**
+Download the pre-computed features file [flickr30k_36.tsv](http://ailb-web.ing.unimore.it/releases/show-control-and-tell/coco_detections.hdf5) (~11.6 GB) and place it under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+```
+python process_bottom_up_feature.py
+```
