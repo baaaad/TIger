@@ -13,3 +13,11 @@ Please cite with the following BibTeX:
 }
 ```
 ![model](images/TIger.png)
+
+
+## Environment setup
+Clone the repository and create the `tiger` conda environment using the `conda.yml` file:
+```
+conda env create -f conda.yml
+conda activate tiger
+```
