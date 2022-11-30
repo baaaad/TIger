@@ -109,4 +109,4 @@ python train.py --tasks 6
 ```
 
 ### Expected output
-Under `model_out`, you may also find the trained model of all experiments. 
+Under `model_out/`, you may also find the trained model of all experiments. 
