@@ -100,9 +100,9 @@ def edit2sent_add(sent, edits, last=False):
 
 def image_bp_features_reader(image_id):
 
-    att_path = '/home/mwb/dataset/bottom_up/flickr30k/train36/extracted_att/' + str(image_id) + '.npz'
-    box_path = '/home/mwb/dataset/bottom_up/flickr30k/train36/extracted_box/' + str(image_id) + '.npy'
-    wh_path = '/home/mwb/dataset/bottom_up/flickr30k/train36/extracted_wh/' + str(image_id) + '.npz'
+    att_path = 'datasets/bottom_up/Flickr30K_36/extracted_att/' + str(image_id) + '.npz'
+    box_path = 'datasets/bottom_up/Flickr30K_36/extracted_box/' + str(image_id) + '.npy'
+    wh_path = 'datasets/bottom_up/Flickr30K_36/extracted_wh/' + str(image_id) + '.npz'
 
     features = np.load(att_path)['feat']
     # img = torch.FloatTensor(att_f)
