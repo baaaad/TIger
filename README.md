@@ -24,10 +24,10 @@ conda activate tiger
 
 ## Data preparation
 ### COCO_EE and Flickr30K_EE
-The processed datasets have been placed in the [dataset](https://github.com/baaaad/TIger/tree/main/datasets) folder, they can also be directly download from [here](https://drive.google.com/drive/folders/1nzIsGT4SC81aMcC48tCMWcqL77sgYrvT?usp=sharing), including the COCO-EE and Flickr30K-EE in `train`, `dev` and `test` splits.
+The processed datasets have been placed in the [dataset](https://github.com/baaaad/TIger/tree/main/datasets) folder, they can also be directly download from [here](https://drive.google.com/drive/folders/1nzIsGT4SC81aMcC48tCMWcqL77sgYrvT?usp=sharing), including the COCO-EE and Flickr30K-EE in `train`, `eval` and `test` splits.
 
 ### Visual Features
-For visual token features, we used the bottom-up features (36 regions for each image) which are extracted by a pre-trained Faster R-CNN. 
+For visual token features, we used the [bottom-up features](https://openaccess.thecvf.com/content_cvpr_2018/papers/Anderson_Bottom-Up_and_Top-Down_CVPR_2018_paper.pdf) (36 regions for each image) which are extracted by a pre-trained Faster R-CNN. 
 
 **COCO-EE**
 
@@ -64,3 +64,49 @@ python eval.py --from_pretrained_tagger_del pretrained_models/Flickr30KEE/tagger
 Under `results/`, you may find the edited results of all experiments. 
 
 ## Training procedure
+Download the pretrained weights of [ViLBERT](https://proceedings.neurips.cc/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf) from [here](22) and place it under the `pretrained_models/ViLBERT-6-Layer` folder.
+
+Run `python train.py` using the following arguments for different submodules.
+
+### COCO-EE
+
+**Tagger_del**
+
+```
+python train.py --tasks 1 --tagger_loss_ratio 1.5
+```
+
+**Tagger_add**
+
+```
+python train.py --tasks 2 --tagger_loss_ratio 1.5
+```
+
+**Inserter**
+
+```
+python train.py --tasks 3
+```
+
+### Flickr30K-EE
+
+**Tagger_del**
+
+```
+python train.py --tasks 4 --tagger_loss_ratio 1.5
+```
+
+**Tagger_add**
+
+```
+python train.py --tasks 5 --tagger_loss_ratio 1.5
+```
+
+**Inserter**
+
+```
+python train.py --tasks 6
+```
+
+### Expected output
+Under `model_out`, you may also find the trained model of all experiments. 
