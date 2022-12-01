@@ -38,7 +38,7 @@ python process_bottom_up_feature.py
 
 **Flickr30K-EE**
 
-Download the pre-computed features file [flickr30k_36.zip](tbd) (~6.5 GB), unzip them and place 'flickr30k_36.tsv' under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+Download the pre-computed features file [flickr30k_36.zip](https://pan.baidu.com/s/1aEZrrLJIC2Yg2c7Vejgpow) (~6.5 GB, code: xlmd), unzip them and place 'flickr30k_36.tsv' under the `datasets/bottom_up/Flickr30K_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
