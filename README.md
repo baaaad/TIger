@@ -31,7 +31,7 @@ For visual token features, we used the [bottom-up features](https://openaccess.t
 
 **COCO-EE**
 
-Download the pre-computed features file [coco_36.tsv](tbd) (~45.2 GB) and place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
+Download the pre-computed features file [trainval_36.zip](https://storage.googleapis.com/up-down-attention/trainval_36.zip) (~24.5 GB), unzip the file and rename the 'tsv' file as 'coco_36.tsv', then place it under the `datasets/bottom_up/COCO_36` folder, run the 'process_bottom_up_feature.py' to process the feature.
 ```
 python process_bottom_up_feature.py
 ```
