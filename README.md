@@ -64,7 +64,7 @@ python eval.py --from_pretrained_tagger_del pretrained_models/Flickr30KEE/tagger
 Under `results/`, you may find the edited results of all experiments. 
 
 ## Training procedure
-Download the pretrained weights of [ViLBERT](https://proceedings.neurips.cc/paper/2019/file/c74d97b01eae257e44aa9d5bade97baf-Paper.pdf) from [here](https://drive.google.com/drive/folders/100QngSuBt_uM3RY2VZ4oLeTVjVx3RUT7?usp=share_link) (~1 GB) and place it under the `pretrained_models/ViLBERT-6-Layer` folder.
+Download the pretrained weights of [ViLBERT](https://arxiv.org/abs/1908.02265) from [here](https://drive.google.com/drive/folders/100QngSuBt_uM3RY2VZ4oLeTVjVx3RUT7?usp=share_link) (~1 GB) and place it under the `pretrained_models/ViLBERT-6-Layer` folder.
 
 Run `python train.py` using the following arguments for different submodules.
 
@@ -110,3 +110,7 @@ python train.py --tasks 6
 
 ### Expected output
 Under `model_out/`, you may also find the trained model of all experiments. 
+
+
+## Acknowledgment
+Special thanks to the authors of [ViLBERT](https://github.com/jiasenlu/vilbert_beta) and [bottom-up-attention](https://github.com/peteanderson80/bottom-up-attention), and the datasets used in this research project.
