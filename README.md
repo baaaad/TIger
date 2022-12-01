@@ -1,7 +1,7 @@
 # TIger
 This repository contains the reference code for the ECE model TIger proposed in the paper [Explicit Image Caption Editing](https://arxiv.org/abs/2207.09625) accpeted to ECCV 2022. Refer to our full paper for detailed intructions and analysis. The dataset and more detailed task information are available in this [ECE repository](https://github.com/baaaad/ECE).
 
-Please cite with the following BibTeX:
+If you find this paper helps your research, please kindly consider citing our paper in your publications.
 
 ```
 @inproceedings{wang2022explicit,
